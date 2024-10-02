@@ -1,0 +1,17 @@
+def majorityElement(nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        # Create a dictionary to store the count of each element 
+        counts = {}
+        # Loop through the array to count the occurances 
+        for num in nums: 
+            if num in counts:
+                counts[num] += 1
+            else: 
+                counts[num] = 1
+            # check the majority element 
+            if counts[num] > len(nums) // 2:
+                return num 
+majorityElement([3,2,3])
